@@ -1,0 +1,25 @@
+%h1 Listing example1s
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Age
+      %th
+      %th
+      %th
+
+  %tbody
+    - @example1s.each do |example1|
+      %tr
+        %td= example1.name
+        %td= example1.description
+        %td= example1.age
+        %td= link_to 'Show', example1
+        %td= link_to 'Edit', edit_example1_path(example1)
+        %td= link_to 'Destroy', example1, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Example1', new_example1_path

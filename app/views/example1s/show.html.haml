@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @example1.name
+%p
+  %b Description:
+  = @example1.description
+%p
+  %b Age:
+  = @example1.age
+
+= link_to 'Edit', edit_example1_path(@example1)
+\|
+= link_to 'Back', example1s_path
